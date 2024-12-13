@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(241, 217, 186);
+    font-family: Arial;
+}
+
+section {
+    display:inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+table, tr, td, th {
+    border: 2px solid rgb(158, 105, 37);
+}
+
+h2 {
+    color: rgb(158, 105, 37);
+}
+
+.tag {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

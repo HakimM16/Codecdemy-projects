@@ -1,0 +1,53 @@
+.header {
+    background-image: url(images/pattern.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    margin: 60px 10px;
+    overflow: hidden;
+}
+
+.title {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    text-align: center;
+    color: rgb(224, 224, 123);
+}
+
+.section {   
+    margin: 40px 10px;
+}
+
+.sub-title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0px;  
+}
+
+.brushes {
+    background-color: mediumspringgreen ;
+}
+
+.frames {
+    background-color: rgb(247, 149, 114);
+}
+
+.paint {
+    background-color: rgb(0, 179, 255);
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.price {
+    color: rgb(30, 9, 152);
+    font-weight: bold;
+}
