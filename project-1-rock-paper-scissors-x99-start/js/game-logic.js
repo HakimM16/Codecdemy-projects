@@ -18,18 +18,21 @@ let playerTwoScore;
 
 function setPlayerMoves(player, moveOneType, moveOneValue, moveTwoType, 
                         moveTwoValue, moveThreeType, moveThreeValue) {
-
+    
+    // deals with no input
     if (!moveOneType || !moveOneValue || !moveTwoType || !moveTwoValue ||
         !moveThreeType || !moveThreeValue) {
         return;
     }
     
+    // deals with invalid type
     if (!isValidMoveType(moveOneType) ||
         !isValidMoveType(moveTwoType) ||
         !isValidMoveType(moveThreeType)) {
         return;
     }
     
+    // deals with invalid value
     if (!isValidMoveValue(moveOneValue) ||
         !isValidMoveValue(moveTwoValue) ||
         !isValidMoveValue(moveThreeValue)) {
@@ -40,6 +43,7 @@ function setPlayerMoves(player, moveOneType, moveOneValue, moveTwoType,
         return;
     }
 
+    // assigns arguments to variables
     if (player === 'Player One') {
         playerOneMoveOneType = moveOneType;
         playerOneMoveOneValue = moveOneValue;
@@ -57,23 +61,28 @@ function setPlayerMoves(player, moveOneType, moveOneValue, moveTwoType,
     }
 }
 
+// Only accepts rock, paper and scissors as moves
 function isValidMoveType(moveType) {
     return (moveType === 'rock') ||
             (moveType === 'paper') ||
             (moveType === 'scissors');
 }
-  
+
+// Only accepts values between 1 and 99
 function isValidMoveValue(moveValue) {
     return (moveValue >= 1) && (moveValue <= 99);
 }
 
 function getMoveWinner(playerOneMoveOneType, playerOneMoveOneValue, 
                         playerTwoMoveOneType, playerTwoMoveOneValue) {
+     
+    // deals with no input
     if (!playerOneMoveOneType || !playerOneMoveOneValue || !playerTwoMoveOneType ||
         !playerTwoMoveOneValue) {
         return null;
     }
 
+    // gets winner based on type of move and/or value
     if (playerOneMoveOneType === playerTwoMoveOneType) {
         if (playerOneMoveOneValue < playerTwoMoveOneValue) {
             return 'Player Two';
@@ -105,6 +114,7 @@ function getMoveWinner(playerOneMoveOneType, playerOneMoveOneValue,
     
 }
 
+// returns the winner of the round
 function getRoundWinner(roundNumber) {
     switch(roundNumber) {
         case 1: 
@@ -121,6 +131,7 @@ function getRoundWinner(roundNumber) {
     }
 }
 
+// displays the winner of the game
 function getGameWinner() {
 
     const roundOne = getRoundWinner(1);
@@ -143,6 +154,7 @@ function getGameWinner() {
     }
 }
 
+// adds the number of wins per round on to a variable
 function addWin(winner) {
     if (winner === 'Player One') {
       playerOneScore = (playerOneScore + 1) || 1;
