@@ -8,6 +8,9 @@ header {
     justify-content: space-between;
 }
 
+.logo img{
+    height: 80%;
+}
 
 .menu {
     display: flex;
@@ -17,7 +20,7 @@ header {
 }    
 
 .menu-options {
-    font-size: 30px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: underline;
 }
@@ -27,9 +30,36 @@ header {
     background-size: cover; /* Makes the image cover the entire section */
     background-repeat: no-repeat; /* Prevents tiling */
     background-position: center; /* Centers the image */
-    height: 90vh; /* Adjust the section height */
+    height: 50vh; /* Adjust the section height */
     color: white; /* Sets text color for contrast */
     display: flex; /* Aligns content inside */
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
+}
+
+.mission_section div, .Tea {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mission_section p {
+    font-size: 22px;
+}
+
+.mission_section h2 {
+    font-size: 30px;
+}
+
+.tea-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.pic-of-tea {
+    height: 70%;
+    width: 70%;
 }
